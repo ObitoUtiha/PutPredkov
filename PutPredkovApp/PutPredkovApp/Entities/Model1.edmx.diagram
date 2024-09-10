@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78791c0b343642d4afcdd03de292ef8e" Name="Diagram1">
+        <EntityTypeShape EntityType="DiplomModel.Categories" Width="1.5" PointX="6" PointY="13" />
+        <EntityTypeShape EntityType="DiplomModel.CommonUse" Width="1.5" PointX="10.5" PointY="15.625" />
+        <EntityTypeShape EntityType="DiplomModel.Employees" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="DiplomModel.Inventory" Width="1.5" PointX="5.25" PointY="9.375" />
+        <EntityTypeShape EntityType="DiplomModel.InventoryResult" Width="1.5" PointX="5.25" PointY="21.375" />
+        <EntityTypeShape EntityType="DiplomModel.ItemsResultInventory" Width="1.5" PointX="12.75" PointY="13.5" />
+        <EntityTypeShape EntityType="DiplomModel.Material" Width="1.5" PointX="8.25" PointY="8.625" />
+        <EntityTypeShape EntityType="DiplomModel.Movement" Width="1.5" PointX="10.5" PointY="9.625" />
+        <EntityTypeShape EntityType="DiplomModel.PersonalUse" Width="1.5" PointX="10.5" PointY="6.875" />
+        <EntityTypeShape EntityType="DiplomModel.Position" Width="1.5" PointX="0.75" PointY="10" />
+        <EntityTypeShape EntityType="DiplomModel.Result" Width="1.5" PointX="7.5" PointY="4.5" />
+        <EntityTypeShape EntityType="DiplomModel.Status" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="DiplomModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DiplomModel.WriteOffs" Width="1.5" PointX="10.5" PointY="12.75" />
+        <AssociationConnector Association="DiplomModel.FK_Material_Categories" />
+        <AssociationConnector Association="DiplomModel.FK_CommonUse_Material" />
+        <AssociationConnector Association="DiplomModel.FK_Employees_Position" />
+        <AssociationConnector Association="DiplomModel.FK_Inventory_Employees" />
+        <AssociationConnector Association="DiplomModel.FK_InventoryResult_Employees" />
+        <AssociationConnector Association="DiplomModel.FK_Material_Employees" />
+        <AssociationConnector Association="DiplomModel.FK_Movement_Employees" />
+        <AssociationConnector Association="DiplomModel.FK_Inventory_Material" />
+        <AssociationConnector Association="DiplomModel.FK_Result_Inventory1" />
+        <AssociationConnector Association="DiplomModel.FK_ItemsResultInventory_InventoryResult" />
+        <AssociationConnector Association="DiplomModel.FK_ItemsResultInventory_Result" />
+        <AssociationConnector Association="DiplomModel.FK_Material_WriteOffs" />
+        <AssociationConnector Association="DiplomModel.FK_Movement_Material" />
+        <AssociationConnector Association="DiplomModel.FK_PersonslUse_Material" />
+        <AssociationConnector Association="DiplomModel.FK_WriteOffs_Material" />
+        <AssociationConnector Association="DiplomModel.FK_Result_Status1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

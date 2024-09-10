@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PutPredkovApp.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Windows\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Classes.AppData" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAQAAAAAAAAEAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Classes\AppData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Classes.WordHelperClass" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACBABAAAAAAAAAAAAQCAAAAAAAAAAgA=</HashCode>
+      <FileName>Classes\WordHelperClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Employees" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEABABAAAEAAAAAgBEAAQAQAAAAJQAACAAAAAgACAAA=</HashCode>
+      <FileName>Classes\EmployeePartialClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Material" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEggABBAAEAAAAAABAAIABQACgAAUAAAAhAAAgAKEAI=</HashCode>
+      <FileName>Classes\MaterialPartialClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.InventoryResult" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAgAAAAAAAAAAAIAAAABCAQACAAAAEQAAEAAAAAACAA=</HashCode>
+      <FileName>Classes\PartialInventoryResultClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.DiplomEntities" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABBEAAAAAAAgBAABAAQAGAAAEAAAAAAAEgACEAA=</HashCode>
+      <FileName>Entities\Model1.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Categories" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Categories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.CommonUse" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAACEAAAAAAAAAAAAAAAAAAAAAAABAAAAgAAAIAA=</HashCode>
+      <FileName>Entities\CommonUse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Inventory" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAIAAIAAAAACAAAAAAAAAQACAAAAAAAAAAAgAAACAA=</HashCode>
+      <FileName>Entities\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.ItemsResultInventory" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAABAAQAAAAAAEAAAAAAAAACAAA=</HashCode>
+      <FileName>Entities\ItemsResultInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Movement" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAQAAAAAAgAAgAAAACAICAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Movement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.PersonalUse" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAgAAAIBA=</HashCode>
+      <FileName>Entities\PersonalUse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Position" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAgAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Result" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAIEAAAAAEAAAAABAAAAABAAAAAAIAAAAgAAAAA=</HashCode>
+      <FileName>Entities\Result.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.Status" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.sysdiagrams" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAAAAAAAAAAAAQAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\sysdiagrams.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Entities.WriteOffs" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACAAAIAgAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\WriteOffs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Pages.EmployeePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgQAAAAAAAAAAIAAAAAAAAABAAAAAAAAAACAA=</HashCode>
+      <FileName>Pages\EmployeePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Pages.InventoryPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAEAAAAAAAAAABUAAAAAAALAAYA=</HashCode>
+      <FileName>Pages\InventoryPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Pages.MaterialPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAQAAAAAAAAAAAAAABEAAAAAAABAAQQ=</HashCode>
+      <FileName>Pages\MaterialPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Pages.MovementPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAEAAAAAAEAAAAAAAAAABEAAAAAAACAAQA=</HashCode>
+      <FileName>Pages\MovementPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PutPredkovApp.Windows.EmployeeAddEditWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEgEAAAAAAAAAAAAACAEABBAEBAAAAAAAAAJAAAQA=</HashCode>
+      <FileName>Windows\EmployeeAddEditWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.InventoryResultWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\InventoryResultWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.MaterialAddEditWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQAAEAAAAAAAAAAAQAAAAIAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Windows\MaterialAddEditWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.MaterialCheckWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAQEAAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Windows\MaterialCheckWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.MaterialChooseWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAAAAAAAAAAAAAAAAAAAAAABEAAIAAAABAAQQ=</HashCode>
+      <FileName>Windows\MaterialChooseWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.NavigationWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAQAEAEAAAgAAAAAAAAEAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Windows\NavigationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PutPredkovApp.Windows.WriteOffWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Windows\WriteOffWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Controls.Page" Collapsed="true">
+    <Position X="12" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TianXiaTech.BlurWindow" Collapsed="true">
+    <Position X="13.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

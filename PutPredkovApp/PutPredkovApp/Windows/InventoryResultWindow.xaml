@@ -1,0 +1,87 @@
+﻿<blurwindow:BlurWindow x:Class="PutPredkovApp.Windows.InventoryResultWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PutPredkovApp.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:blurwindow="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        mc:Ignorable="d"
+        Title="Путь предков: Результат инвентаризации" Icon="/logoPut.ico" TitleForeground="#cc8500" FontFamily="Bahnschrift" MaxHeight="500" MaxWidth="800" MinHeight="500" MinWidth="800" Height="500" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#2d2d2d" Opacity="0.9"/>
+        </Grid.Background>
+        <StackPanel Margin="0,10,0,0">
+            <StackPanel>
+                <TextBlock Text="Результат инвентаризации №: "  x:Name="IdTb" Foreground="White" HorizontalAlignment="Center" FontSize="20"/>
+            </StackPanel>
+            <TextBlock x:Name="DateTb" Text="Дата проведения инвентаризации: " Foreground="White" Margin="20,50,0,0" FontSize="14"/>
+            <TextBlock x:Name="ReasonTb" Text="Причина проведения инвентаризации: " Foreground="White" Margin="20,20,0,0" FontSize="14"/>
+            <TextBlock x:Name="EmployeeTb" Text="Сотрудник проводивший инвентаризацию: " Foreground="White" Margin="20,20,0,0" FontSize="14"/>
+            <TextBlock x:Name="ResultTb" Text="Результат: " Foreground="White" Margin="20,20,0,0" FontSize="14"/>
+            <StackPanel Orientation="Horizontal" Margin="20,20,0,0">
+                <StackPanel>
+                    <TextBlock Text="Материалы, не прошедшие инвентаризацию" TextAlignment="Center" Foreground="White" Margin="20,20,0,20" FontSize="14"/>
+                    <ScrollViewer>
+                        <ListView Height="180" Width="300" x:Name="ListUnSuccesMaterial">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border x:Name="MaterialPnl"  BorderThickness="1" CornerRadius="20" Width="260" Height="120" Background="#cc8500">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Margin="2" Source="{Binding Result.Inventory.Material.AddFrontImage}" Grid.Column="0"></Image>
+                                            <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Result.Inventory.Material.Name}"/>
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center"  Text="{Binding Result.Inventory.Material.Manufacturer}"/>
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" Text="{Binding Result.Inventory.Material.Categories.Title}"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </StackPanel>
+                <StackPanel Margin="100,0,0,0">
+                    <TextBlock TextAlignment="Center" Text="Материалы, прошедшие инвентаризацию" Foreground="White" Margin="20,20,0,20" FontSize="14"/>
+                    <ScrollViewer>
+                        <ListView Height="180" Width="300" x:Name="ListSuccesMaterial">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border x:Name="MaterialPnl"  BorderThickness="1" CornerRadius="20" Width="260" Height="120" Background="#cc8500">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="0.3*"/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Margin="2" Source="{Binding Result.Inventory.Material.AddFrontImage}" Grid.Column="0"></Image>
+                                            <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Result.Inventory.Material.Name}"/>
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center"  Text="{Binding Result.Inventory.Material.Manufacturer}"/>
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" Text="{Binding Result.Inventory.Material.Categories.Title}"/>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ScrollViewer>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</blurwindow:BlurWindow>

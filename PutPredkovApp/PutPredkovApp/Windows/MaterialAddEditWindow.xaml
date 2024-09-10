@@ -1,0 +1,80 @@
+﻿<blurwindow:BlurWindow x:Class="PutPredkovApp.Windows.MaterialAddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PutPredkovApp.Windows"
+        xmlns:blurwindow="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Путь предков: Редактирование/Добавление материала" Icon="/logoPut.ico" TitleForeground="#cc8500" FontFamily="Bahnschrift" MaxHeight="470" MaxWidth="800" MinHeight="470" MinWidth="800" Height="470" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#2d2d2d" Opacity="0.8"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="20" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontFamily="Bahnschrift" Text="Информция о материале" Foreground="White"/>
+        <StackPanel Margin="0,30,0,0" VerticalAlignment="Center">
+            <Image Width="120" Source="../Resourses/materialIco.png" Margin="0,0,0,10"/>
+            <StackPanel Margin="0,40,0,25"  Orientation="Horizontal">
+                <TextBlock Margin="10,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Наименование:   " Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White"  Margin="1,0,20,0" Width="230" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     x:Name="MaterialName"
+                     materialDesign:HintAssist.Hint="Имя материала"
+                     materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,40"  Orientation="Horizontal">
+                <TextBlock Margin="10,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Категория:           " Foreground="White"/>
+                <ComboBox DisplayMemberPath="Title" Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White"  Margin="1,0,20,0" Width="230" Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                     x:Name="MaterialCategoryCmb"
+                     materialDesign:HintAssist.Hint="Выберите категорию материала"
+                     materialDesign:HintAssist.IsFloating="False">
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Foreground" Value="Black"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                </ComboBox>
+            </StackPanel>
+            <Button x:Name="SaveBtn" VerticalAlignment="Bottom" Click="SaveBtn_Click" FontSize="15" FontFamily="Bahnschrift" Margin="0,10,0,0" Width="200" Height="40" Content="Сохранить" Background="#cc8500" Foreground="White" BorderBrush="Transparent"></Button>
+        </StackPanel>
+        <StackPanel Opacity="1" Margin="10,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1">
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Стоимость:         " Foreground="White"/>
+                <TextBox  Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     x:Name="CostTb" KeyDown="CostTb_KeyDown"
+                     materialDesign:HintAssist.Hint="Стоимость материала"
+                     materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Дата принятия:  " Foreground="White"/>
+                <DatePicker Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" CalendarClosed="DatePurchaseTb_CalendarClosed" CalendarOpened="DatePurchaseTb_CalendarOpened" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                     materialDesign:HintAssist.Hint="Выберите дату поступления"
+                     x:Name="DatePurchaseTb" 
+                     materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Производитель: " Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                     x:Name="ManufacturerTb"
+                     materialDesign:HintAssist.Hint="Введите имя производителя"
+                     materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Номер чека:       " Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond"  Style="{StaticResource MaterialDesignOutlinedTextBox}" Foreground="White" Margin="1,0,20,0" Width="250"
+                     x:Name="ReceiptNumberTb"
+                     materialDesign:HintAssist.Hint="Введите номер чека "
+                     materialDesign:HintAssist.IsFloating="False"
+                     >
+                </TextBox>
+            </StackPanel>
+            <StackPanel Margin="30,0,0,20" HorizontalAlignment="Center"  Orientation="Horizontal">
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</blurwindow:BlurWindow>

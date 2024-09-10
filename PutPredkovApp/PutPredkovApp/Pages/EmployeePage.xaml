@@ -1,0 +1,69 @@
+﻿<Page x:Class="PutPredkovApp.Pages.EmployeePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PutPredkovApp.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EmployeePage">
+
+    <Grid Background="#2d2d2d">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#cc8500"  Background="#cc8500" Height="40"  Margin="20,0,20,0" CornerRadius="20" BorderThickness="1" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="20" Margin="10,0,20,0"  Source="../Resourses/search.png"/>
+                <TextBox Foreground="White" VerticalAlignment="Center" Width="500" Margin="10,0,10,0" 
+                         x:Name="SearchBar"
+                         TextChanged="SearchBar_TextChanged"
+                         FontFamily="Bahnschrift"
+                         materialDesign:HintAssist.Hint="Введите ФИО сотрудника"
+                         materialDesign:HintAssist.Foreground="White"
+                         materialDesign:HintAssist.FloatingHintHorizontalAlignment="Left"   
+                         />
+                <ComboBox Foreground="White" FontFamily="Bahnschrift" x:Name="RoleCmb" SelectionChanged="RoleCmb_SelectionChanged" DisplayMemberPath="Title" Width="80">
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Foreground" Value="Black"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                </ComboBox>
+                <Image Style="{Binding}" ToolTip="Стереть всё" x:Name="ClearBtn" MouseLeftButtonDown="ClearBtn_Click"  Width="30" Source="../Resourses/closeIcon.png" Margin="20,0,0,0"/>
+            </StackPanel>
+        </Border>
+        <ScrollViewer Grid.Row="1">
+            <StackPanel HorizontalAlignment="Stretch">
+                <ListView  x:Name="EmployeeList">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <Border x:Name="EmployeePnl" MouseLeftButtonDown="EmployeePnl_MouseLeftButtonDown" BorderThickness="1" CornerRadius="20" Width="260" Height="120" Background="#cc8500">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.3*"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.ColumnSpan="4" Grid.RowSpan="4" Panel.ZIndex="9" Source="{Binding AddBackImage}"></Image>
+                                    <Image Margin="2" Source="{Binding AddFrontImage}" Grid.Column="0"></Image>
+                                    <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                                        <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Name}"/>
+                                        <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center"  Text="{Binding Birthday, StringFormat={}{0:d MMMM yyyy}, ConverterCulture=ru}"/>
+                                        <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" Text="{Binding Position.Title}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

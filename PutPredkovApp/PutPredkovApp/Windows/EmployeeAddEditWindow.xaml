@@ -1,0 +1,138 @@
+﻿<blurwindow:BlurWindow x:Class="PutPredkovApp.Windows.EmployeeAddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:blurwindow="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PutPredkovApp.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Информация о пользователе" Icon="/logoPut.ico" TitleForeground="#cc8500" FontFamily="Bahnschrift" MaxHeight="470" MaxWidth="800" MinHeight="470" MinWidth="800" Height="470" Width="800">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="#2d2d2d" Opacity="0.8"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontSize="20" HorizontalAlignment="Center" Grid.ColumnSpan="2" FontFamily="Bahnschrift" Text="Информция о сотруднике" Foreground="White"/>
+        <StackPanel Margin="0,20,0,0" VerticalAlignment="Center">
+            <Image Width="120" Source="../Resourses/userIco.png" Margin="0,0,0,10"/>
+            <StackPanel Margin="0,0,0,40"  Orientation="Horizontal">
+                <TextBlock Margin="10,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="ФИО сотрудника:" Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White"  Margin="1,0,20,0" Width="230" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="FIOTb"
+                         materialDesign:HintAssist.Hint="Фамилия Имя Отчество"
+                         materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <TextBlock  Margin="0,0,0,10" FontSize="15" Text="Информация о предметах сотрудника:" Foreground="White" HorizontalAlignment="Center"/>
+            <StackPanel x:Name="MaterialPanel" Margin="5,0,0,0" Orientation="Horizontal" Height="100" MaxHeight="100" MinHeight="100">
+                <ScrollViewer  Width="350" x:Name="UserMaterialScroll">
+                    <StackPanel>
+                        <ListView HorizontalAlignment="Center" x:Name="UserMaterialsList">
+                            <ListView.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical"/>
+                                </ItemsPanelTemplate>
+                            </ListView.ItemsPanel>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Border x:Name="MaterialPnl" MouseLeftButtonDown="MaterialPnl_MouseLeftButtonDown" BorderThickness="1" CornerRadius="20" Width="260" Height="80" Background="#cc8500">
+                                            <StackPanel VerticalAlignment="Center" Grid.Column="1" Orientation="Vertical">
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                <TextBlock Margin="0,0,0,5" FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text="{Binding Name}"/>
+                                                <TextBlock FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text=" - "/>
+                                                <TextBlock FontFamily="Bahnschrift" Foreground="White" TextAlignment="Center" TextWrapping="Wrap" Text="{Binding ReceiptNumber}"/>
+                                            </StackPanel>
+                                            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                                                <Button Visibility="{Binding AcrtionBtnVisibility}" Width="40" Height="40" BorderBrush="BlanchedAlmond" x:Name="BtnToStock" Click="BtnToStock_Click" Margin="0,0,20,0" ToolTip="Отправить выбранный предмет в общий доступ">
+                                                    <Button.Background>
+                                                        <ImageBrush Stretch="UniformToFill" ImageSource="../Resourses/sharedaccess.png"></ImageBrush>
+                                                    </Button.Background>
+                                                </Button>
+                                                <Button Visibility="{Binding AcrtionBtnVisibility}" Width="40" Height="40"  BorderBrush="BlanchedAlmond" x:Name="BtnDelMaterial" Click="BtnDelMaterial_Click" ToolTip="Списать выбранный предмет(откроется доп. страница)">
+                                                    <Button.Background>
+                                                        <ImageBrush Stretch="UniformToFill"  ImageSource="../Resourses/writeoff.png"></ImageBrush>
+                                                    </Button.Background>
+                                                </Button>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+                <Button VerticalAlignment="Center" Content="+" Background="#cc8500" Width="30" Height="30" Padding="0" ToolTip="Добавить предмет пользователю" BorderBrush="Transparent" Margin="10,0,0,0"
+                        x:Name="BtnAddItem"
+                        Click="BtnAddItem_Click"/>
+            </StackPanel>
+            <Button x:Name="SaveBtn" Click="SaveBtn_Click" FontSize="15" FontFamily="Bahnschrift" Margin="0,10,0,0" Width="200" Height="40" Content="Сохранить" Background="#cc8500" Foreground="White" BorderBrush="Transparent"></Button>
+        </StackPanel>
+        <StackPanel Opacity="1" Margin="10,40,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1">
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Номер телефона:" Foreground="White"/>
+                <TextBox  Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="PhoneNumberTb" KeyDown="PhoneNumberTb_KeyDown"
+                         materialDesign:HintAssist.Hint="Пример: 79998885566"
+                         materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Номер паспорта: " Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         materialDesign:HintAssist.Hint="Пример: 8888 777555"
+                         x:Name="PassportTb" KeyDown="PassportTb_KeyDown"
+                         materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Полный адрес:    " Foreground="White"/>
+                <TextBox Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0" Width="250" Style="{StaticResource MaterialDesignOutlinedTextBox}"
+                         x:Name="AddressTb"
+                         materialDesign:HintAssist.Hint="Пример: г. ..., ул. ..., д. ..., кв. ..."
+                         materialDesign:HintAssist.IsFloating="False"/>
+            </StackPanel>
+            <StackPanel Margin="0,0,0,20"  Orientation="Horizontal">
+                <TextBlock Margin="0,0,20,0" FontSize="13" VerticalAlignment="Center"  Text="Должность:          " Foreground="White"/>
+                <ComboBox Background="#cc8500" BorderBrush="BlanchedAlmond" DisplayMemberPath="Title" Style="{StaticResource MaterialDesignOutlinedComboBox}" Foreground="White" Margin="1,0,20,0" Width="250"
+                         x:Name="RoleCmb"
+                         materialDesign:HintAssist.Hint="Выберите должность сотрудника"
+                         materialDesign:HintAssist.IsFloating="False"
+                         >
+                    <ItemsControl.ItemContainerStyle>
+                        <Style>
+                            <Setter Property="Control.Foreground" Value="Black"/>
+                        </Style>
+                    </ItemsControl.ItemContainerStyle>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="30,0,0,20" HorizontalAlignment="Center"  Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock TextAlignment="Center" Margin="0,0,20,10" FontSize="13" VerticalAlignment="Center"  Text="Дата принятия:" Foreground="White"/>
+                    <DatePicker Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0"
+                      x:Name="DateOfAcceptDp"
+                      CalendarOpened="DateOfAcceptDp_CalendarOpened"
+                      CalendarClosed="DateOfAcceptDp_CalendarClosed"
+                      Width="160"
+                      materialDesign:HintAssist.Hint="Выберите дату"
+                      Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                      materialDesign:HintAssist.IsFloating="False"
+                      CalendarStyle="{StaticResource MaterialDesignCalendarPortraitBase}"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock TextAlignment="Center" Margin="0,0,20,10" FontSize="13" VerticalAlignment="Center"  Text="Дата рождения:" Foreground="White"/>
+                    <DatePicker Background="#cc8500" BorderBrush="BlanchedAlmond" Foreground="White" Margin="1,0,20,0"
+                      CalendarOpened="DateOfBirthdayDp_CalendarOpened"
+                      CalendarClosed="DateOfBirthdayDp_CalendarClosed"
+                      x:Name="DateOfBirthdayDp"
+                      Width="160"
+                      materialDesign:HintAssist.Hint="Выберите дату"
+                      Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                      materialDesign:HintAssist.IsFloating="False"
+                      CalendarStyle="{StaticResource MaterialDesignCalendarPortraitBase}">
+                    </DatePicker>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</blurwindow:BlurWindow>

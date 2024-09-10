@@ -1,0 +1,58 @@
+﻿<blurwindow:BlurWindow x:Class="PutPredkovApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PutPredkovApp"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:blurwindow="clr-namespace:TianXiaTech;assembly=BlurWindow"
+        mc:Ignorable="d"
+        Title="Авторизация" Icon="/logoPut.ico" TitleForeground="#cc8500" MaxHeight="500" MaxWidth="800" MinHeight="500" MinWidth="800" Height="500" Width="800"  WindowStartupLocation="CenterScreen" >
+    <Window.Background>
+        <SolidColorBrush Opacity=".1"/>
+    </Window.Background>
+    <Border Height="400" CornerRadius="20" Width="600"  VerticalAlignment="Center" HorizontalAlignment="Center" >
+        <Border.Background>
+            <SolidColorBrush Color="#2d2d2d" Opacity=".4"></SolidColorBrush>
+        </Border.Background>
+        <StackPanel VerticalAlignment="Center" Margin="20" Opacity="1">
+            <TextBlock FontFamily="Bahnschrift" Text="Авторизация" Margin="0,10,0,20" Foreground="White" HorizontalAlignment="Center" FontSize="25"></TextBlock>
+            <TextBox Margin="80,20,80,20"
+              x:Name="NameTb"
+              FontFamily="Bahnschrift"
+              materialDesign:HintAssist.Foreground="#cc8500"
+              Background="White"
+              BorderBrush="Transparent"
+              materialDesign:HintAssist.FloatingHintHorizontalAlignment="Left"
+              materialDesign:HintAssist.Background="White"
+              materialDesign:HintAssist.FloatingScale="1.1"
+              materialDesign:HintAssist.Hint="Имя"
+              Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <TextBox Margin="80,20,80,20"
+              x:Name="IdTb"
+              FontFamily="Bahnschrift"
+              materialDesign:HintAssist.Foreground="#cc8500"
+              Background="White"
+              BorderBrush="Transparent"
+              materialDesign:HintAssist.FloatingHintHorizontalAlignment="Left"
+              materialDesign:HintAssist.Background="White"
+              materialDesign:HintAssist.FloatingScale="1.1"
+              materialDesign:HintAssist.Hint="Идентификатор"
+              Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+            <Button x:Name="BtnEnter" Click="BtnEnter_Click" FontSize="15" FontFamily="Bahnschrift" Margin="0,40,0,0" Width="200" Height="40" Content="Войти" Background="#cc8500" Foreground="White" BorderBrush="Transparent"></Button>
+            <StackPanel Margin="0,15,0,0" HorizontalAlignment="Center" Orientation="Horizontal">
+                <TextBlock FontFamily="Bahnschrift" VerticalAlignment="Center" TextAlignment="Center" Text="Войти как гость" FontSize="15" Foreground="White"></TextBlock>
+                <ToggleButton
+                    
+                  x:Name="toggleGhoust"
+                  Unchecked="toggleGhoust_Unchecked"
+                  Checked="toggleGhoust_Checked"
+                  VerticalAlignment="Center"
+                  Margin="10,0,0,0"
+                  Background="#cc8500"
+                  Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                  ToolTip="Default ToggleButton Style" />
+            </StackPanel>
+         </StackPanel>
+    </Border>
+</blurwindow:BlurWindow>
